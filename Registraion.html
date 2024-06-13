@@ -1,0 +1,250 @@
+<Html>
+<head>
+<title>
+Registration Page
+</title>
+     <link rel="stylesheet" href="style.css">
+    <style>
+
+body{
+    dispaly:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:60vh;
+    margin:100px;
+    background:url('image2.avif') no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+
+button {
+       background-color:#213030;
+       width: 80%;
+        color: white;
+        padding: 15px;
+        margin: 10px 0px;
+        border: none;
+        cursor: pointer;
+         border-radius:15px;
+         }
+ form {
+        border: 5px solid white;
+        width: 900px;
+        height: 1200px;
+        padding: 10px;
+        margin: 0;
+        background:transparent;
+
+    }
+
+
+
+
+input[type=text],input[type=number],input[type=date], input[type=email],input[type=password],textarea, select[name=city], select[name=state],input[type=username]{
+  width: 500px;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+    </style>
+</head>
+
+<body>
+ <div class="wrapper"><center>
+    <form action="">
+      <h1>Registraion form</h1>
+        <div class="content">
+            <div class="input-box">
+                <label> First name: </label>
+                  <input type="text" placeholder="First name" name="firstname" required>
+            </div>
+
+           <div class="input-box">
+               <label> Last name: </label>
+                  <input type="text" placeholder="Last name" name="lasttname" required>
+            </div>
+           <div class="input-box">
+               <label> Date of birth:</label>
+                  <input type="text" placeholder="Date of birth" name="dateofbirth" required>
+            </div>
+             <span class="gendertitle">Gender</span>
+ <div class="gendercategory">
+
+                 <input type="radio" name="gender" id="male">
+                <label for="male">Male</label>
+                 <input type="radio" name="gender" id="female">
+                <label for="female">Female</label>
+                 <input type="radio" name="gender" id="other">
+                <label for="other"> Other</label>
+
+            </div>
+
+             <div class="input-box">
+               <label> Age: </label>
+                  <input type="text" placeholder="Age" name="age" required>
+            </div>
+            <div class="input-box">
+                <label>Phone:</label>
+                  <input type="number" placeholder="Number" name="number" required>
+            </div>
+
+
+           <div class="input-box">
+                <label>State:</label>
+               <select name="state" id="state">
+                   <option value="" selected="selected">State</option>
+               </select>
+           </div>
+           <div class="input-box">
+                <label>City:</label>
+                <select name="city" id="city">
+                     <option value="" selected="selected">City</option>
+                </select>
+           </div>
+         <div class="input-box">
+                <label>Email:</label>
+                  <input type="email" placeholder="Email" name="email" required>
+            </div>
+        <div class="input-box">
+                <label>User name:</label>
+                  <input type="text" placeholder="User name" name="username" required>
+            </div>
+        <div class="input-box">
+                <label>Password:</label>
+                  <input type="password" placeholder="Password" name="password" required>
+            </div>
+        <div class="input-box">
+                <label>Confirm password:</label>
+                  <input type="password" placeholder="Confirm password" name="confirm password" required>
+            </div>
+          <button type="submit" class="btn">Register</button>
+            <div  class="registerlink"> <p>Already have an account?
+                <a href="#">Log in</a></p>
+     </div>
+
+
+        </div>
+     </form>
+ </center>
+ </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!--<body >-->
+<!--<br>-->
+<!--<br>-->
+<!--<form action="POST">-->
+<!--    <div class="container">-->
+<!--<h1 >Registraion Form</h1>-->
+
+<!--<div class="mb-3">-->
+
+<!--<label> First name: </label>-->
+<!--<input type="text" name="First name" /> <br> <br>-->
+<!--<label> Middle name: </label>-->
+<!--<input type="text" name="middlename"/> <br> <br>-->
+<!--<label> Last name: </label>-->
+<!--<input type="text" name="lastname" /> <br> <br>-->
+<!--<label> Date of birth:</label>-->
+<!--    <input type="date" name="date" /> <br> <br><br>-->
+<!--<label> Age: </label>-->
+<!--<input type="number" name="age" size="3"/> <br> <br><br>-->
+
+
+<!--<label>-->
+<!--Gender :-->
+<!--</label><br>-->
+<!--<input type="radio" name="male"/> Male <br>-->
+<!--<input type="radio" name="female"/> Female <br>-->
+<!--<input type="radio" name="other"/> Other-->
+<!--<br>-->
+<!--<br>-->
+
+<!--<label>-->
+<!--Phone :-->
+<!--</label>-->
+<!--<input type="" name="country code"  value="+91" size="2"/>-->
+<!--<input type="number" name="phone" size="10"/> <br> <br><br>-->
+<!--   <label>-->
+<!--Email :-->
+<!--</label>-->
+<!--<input type="email" id="email" name="email"/> <br>-->
+<!--<br> <br>-->
+<!--<label>Address</label>-->
+<!--<br>-->
+<!--<textarea cols="80" rows="5" value="address">-->
+<!--</textarea>-->
+<!--<br> <br>-->
+
+<!--<label>-->
+<!--State:-->
+<!--</label>-->
+<!--<select>-->
+<!--<option value="state">State</option>-->
+<!--<option value="kerala">Kerala</option>-->
+<!--<option value="karnataka">Karnataka</option>-->
+<!--<option value="tamilnadu">Tamil Nadu</option>-->
+
+<!--</select>-->
+<!--<br><br>-->
+<!--<label>-->
+<!--    City:-->
+<!--</label>-->
+<!--<select name="States" id="states">-->
+<!--    <optgroup label="Kerala">-->
+<!--      <option value="Thiruvanathapuram">Thiruvanathapuram</option>-->
+<!--      <option value="Kollam">Kollam</option>-->
+<!--         <option value="Thiruvanathapuram">Thiruvanathapuram</option>-->
+<!--      <option value="Ernakulam">Ernakulam</option>-->
+<!--         <option value="Pattanamthitta">Pattanamthitta</option>-->
+<!--      <option value="Kottayam">Kottayam</option>-->
+<!--         <option value="Palakad">Palakad</option>-->
+<!--      <option value="Kollam">Kollam</option>-->
+<!--    </optgroup>-->
+<!--    <optgroup label="Karnataka">-->
+<!--      <option value="Hassan">Hassan</option>-->
+<!--      <option value="Haveri">Haveri</option>-->
+<!--        <option value="Mysuru">Mysuru</option>-->
+<!--      <option value="Udupi">Udupi</option>-->
+<!--    </optgroup>-->
+<!--    <optgroup label="Tamil Nadu">-->
+<!--      <option value="Coimbatore">Coimbatore</option>-->
+<!--      <option value="Salem">Salem</option>-->
+<!--        <option value="Theni">Theni</option>-->
+<!--      <option value="Erode">Erode</option>-->
+<!--    </optgroup>-->
+<!--  </select>-->
+<!--    <br><br>-->
+<!--    <label>-->
+<!--    Username:-->
+<!--</label>-->
+
+<!--<input type="username" id="username" name="username"> <br>-->
+<!--<br> <br>-->
+<!--    <label>-->
+<!--   Password:-->
+<!--</label>-->
+
+<!--<input type="Password" id="password" name="password"> <br>-->
+<!--<br> <br>-->
+<!--    <label>-->
+<!--   Confirm password:-->
+<!--</label>-->
+
+<!--<input type="Password" id="confirmpassword" name="confirmpassword"> <br> <br>-->
+<!--<center><input type="button" value="Submit" style=" width:100px; background-color:lightgreen;"/></center>-->
+<!--</div>-->
+<!--    </div>-->
+<!--</form>-->
+<!--</body>-->
+<!--</html>-->
