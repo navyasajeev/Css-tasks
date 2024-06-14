@@ -1,118 +1,15 @@
-<Html>
-<head>
-<title>
-Contact Us Page
-</title>
-    <link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-.contact{
-position:relative;
-min-height:100vh;
-padding:50px 100px;
-display:flex;
-justify-content:center;
-align-items:center;
-flex-direction:column;
- background:url('image2.avif') no-repeat;
-    background-size:cover;
-    background-position:center;
-    }
-
-.contact .content
-{
-    max-width:800px;
-    text-align:center;
-}
-.container
-{
-    width:100%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    margin-top:30px;
-    }
-.container .contactinfo
-{
-     width:50%;
-     display:flex;
-     flex-direction:column;
- }
-.container .contactinfo .box
-{
-  position:relative;
-  padding:20px 0;
-  display:flex;
- }
- .container .contactinfo .box .icon
-{
-   min-width:60px;
-   height:60px;
-   background:#fff;
-   display:flex;
-   justify-content:center;
-   align-items:center;
-   border-radius:50%;
-   font-size:22px;
-   }
-   .container .contactinfo .box .text
-   {
-     display:flex;
-     margin-left:20px;
-     font-size:16px;
-     flex-direction:column;
-     font-weight:300;
-}
-   .contactform
-   {
-    width:40%;
-    padding:40px;
-    background:#fff;
-   }
-.contactform .inputbox
-{
-   position:relative;
-   width:100%;
-   margin-top:10px;
-
-}
-.contactform .inputbox input,
-.contactform .inputbox textarea
-{
-   width:100%;
-   padding:5px 0;
-   font-size:16px;
-   margin:10px 0;
-   border:none;
-   border-bottom:2px solid #333;
-   }
-   @media(max-width:991px)
-   {
-        .contact
-        {
-            padding:50px;
-        }
-        .container
-        {
-        flex-direction:column;
-        }
-        .container .contactinfo,
-        .contactform
-        {
-          margin-bottom:40px;
-          width:100%;
-          }
-          }
-</style>
+    <link rel="stylesheet" href="contactus.css">
+    
 </head>
 <body >
 <section class="contact">
@@ -125,14 +22,14 @@ flex-direction:column;
                 <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
                 <div class="text">
                     <h3>Address</h3>
-                    <p>46765 Sugar Road,Palai</p>
+                    <p>46765 Shoeclues complex,Palai </p>
                 </div>
             </div>
             <div class="box">
                 <div class="icon"><i class="fa-solid fa-envelope"></i></div>
                 <div class="text">
                     <h3>Email</h3>
-                    <p>abc@gmail.com</p>
+                    <p>shopclues@gmail.com</p>
                 </div>
             </div>
             <div class="box">
@@ -144,29 +41,36 @@ flex-direction:column;
             </div>
         </div>
         <div class="contactform">
-            <form>
-                <h2>Send message</h2>
+            <form name="custom_form" >
+                <h2 style="text-align:center;">Send message</h2>
+                <div class="input-row">
                 <div class="inputbox">
-                    <input type="text" name="" required="required">
-                    <span>Full name</span>
+                     <label>Full name</label>
+                    <input type="text" name="name"  id="contact-name" onkeyup="validateName()">
+                    <span id="name-error"></span>
                 </div>
                 <div class="inputbox">
-                    <input type="text" name="" required="required">
-                    <span>Email</span>
+                    <label>Email</label>
+                    <input type="text" name="email" id="contact-email" onkeyup="validateEmail()">
+                    <span id="email-error"></span>
                 </div>
                 <div class="inputbox">
-                   <textarea required="required"></textarea>
-                    <span>Type your message...</span>
+                       <label>Type your message...</label>
+                   <textarea  name="message"  id="contact-message" onkeyup="validateMessage()"></textarea>
+                     <span id="message-error"></span>
                 </div>
                 <div class="inputbox">
-                    <input type="submit" name="" value="Send">
+                    <input type="submit" name="" value="Send" onclick="return validateForm()">
+                    <span id="submit-error"></span>
+                </div>
                 </div>
             </form>
         </div>
     </div>
 </section>
+<script type="text/javascript" src="contactus.js"></script>
 </body>
-</Html>
+</html>
 
 
 
