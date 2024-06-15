@@ -6,99 +6,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="register.css" />
-      <script type="text/javascript" src="register.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   </head>
   <body>
+    <header>
+      <nav >
+     <input type="checkbox" id="check">
+     <label for="check" class="checkbtn">
+       <i class="fas fa-bars"></i>
+     </label>
+        <label class="logo">Shopclues</label>
+       
+        <ul>
+          <li><a  href="home.html">Home</a></li>
+          <li><a class="active" href="Aboutus.html">About us</a></li>
+          <li><a href="Contactus.html">Contact us</a></li>
+          <li><a href="Registraion.html">Sign up</a></li>
+          <li><a href="login.html"> Sign in</a></li>
+        </ul>
+      </nav>
+   
+   </header>
     <section class="container">
       <header>Sign up</header>
-       <form method="POST"  class="form" action="Userlogin.html" onSubmit="return formvalid()">
-
+         <form   class="form" >
+            <div class="column">
+                <div class="input-box">
+                     <label>First name</label>
+                     <input type="text"  placeholder="First name" id="firstname" onkeyup="validateName()">
+                     <span id="firsterror"></span>
+               </div>
+               <div class="input-box">
+                     <label>Last name</label>
+                     <input type="text"  placeholder="Last name" id="lastname" onkeyup="validateLast()">
+                     <span id="seconderror"></span>
+               </div>
+            </div>
+            <div class="column">
+               <div class="input-box">
+                     <label>Phone number</label>
+                     <input type="number" placeholder="Phone number" id="phoneNumber" onkeyup="validatePhone()">
+                     <span id="phoneerror"></span>
+               </div>
+               <div class="input-box">
+                     <label>Date of birth</label>
+                     <input type="date"  placeholder="Birth date" required />
+                     <span id="dateerror"></span>
+               </div>
+            </div>
+            <div class="gender-box" >
+            <h3>Gender</h3>
+                <div class="gender-option">
+                <div class="gender" >
+                    <input type="radio" id="check-male" name="gender"  />
+                    <label for="check-male">Male</label>
+                </div>
+                <div class="gender">
+                    <input type="radio" id="check-female" name="gender" />
+                    <label for="check-female">Female</label>
+               </div>
+               <div class="gender">
+                    <input type="radio" id="check-other" name="gender" />
+                    <label for="check-other">Prefer not to say</label>
+                </div>
+             </div>
+             <span id="gendererror"></span>
+        <div>
+        <div class="input-box ">
+          <label>Address</label>
+          <input type="text"  placeholder="Address line 1" id="line1" onkeyup="validateLine1()">
+          <span id="line1error"></span>
+          <input type="text" placeholder="Address line 2" id="line2" onkeyup="validateLine2()">
+          <span id="line2error"></span>
           <div class="column">
+            <div class="select-box">
+            <select id="state" onchange="cities()" >
+                <option value="select">State</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Tamil nadu">Tamil nadu</option>
+                <option value="Karnataka">Karnataka</option>
+            </select>
+            <span id="stateerror"></span>
+            </div>
+               <div class="select-box"> 
+              <select id="city">
+              <option >city</option> 
+              </select>
+            </div>
+          </div>  
+        <div class="column">
         <div class="input-box">
-          <label>First name</label>
-          <input type="text"  placeholder="First name" required />
+             <label>Email address</label>
+             <input type="text"  placeholder="Email address" id="emailaddress" onkeyup="validateEmail()">
+             <span id="emailerror"></span>
         </div>
-
         <div class="input-box">
-          <label>Last name</label>
-          <input type="text"  placeholder="Last name" required />
+              <label>Username</label>
+              <input type="text"  placeholder="Username"  id="username" onkeyup="validateUsername()" >
+              <span id="usernameerror"></span>
         </div>
         </div>
         <div class="column">
-          <div class="input-box">
-            <label>Phone number</label>
-            <input type="number" id="phone" placeholder="Phone number" required /><span id="s1"></span>
-          </div>
-          <div class="input-box">
-            <label>Date of birth</label>
-            <input type="date"  placeholder="Birth date" required />
-          </div>
-        </div>
-        <div class="gender-box">
-          <h3>Gender</h3>
-          <div class="gender-option">
-            <div class="gender">
-              <input type="radio" id="check-male" name="gender" checked />
-              <label for="check-male">Male</label>
-            </div>
-            <div class="gender">
-              <input type="radio" id="check-female" name="gender" />
-              <label for="check-female">Female</label>
-            </div>
-            <div class="gender">
-              <input type="radio" id="check-other" name="gender" />
-              <label for="check-other">Prefer not to say</label>
-            </div>
-          </div>
-        </div>
-        <div class="input-box address">
-          <label>Address</label>
-          <input type="text"  placeholder="Address line 1" required />
-          <input type="text" placeholder="Address line 2" required />
-          <div class="column">
-            <div class="select-box">
-              <select >
-                <option >State</option>
-                <option>Kerala</option>
-                <option>Tamil nadu</option>
-              </select>
-            </div>
-               <div class="select-box">
-              <select>
-                <option >City</option>
-                <option></option>
-                <option></option>
-              </select>
-            </div>
-          </div>  <div class="column">
         <div class="input-box">
-          <label>Email address</label>
-          <input type="text" id="email" placeholder="Email address" required /><span id="s2"></span>
+               <label>Password</label>
+               <input type="password"  placeholder="Password" id="password" onkeyup="validatePassword()" >
+               <span id="passworderror"></span>
         </div>
         <div class="input-box">
-          <label>Username</label>
-          <input type="text"  placeholder="Username" required />
-        </div>
-        </div>
-             <div class="column">
-        <div class="input-box">
-          <label>Password</label>
-          <input type="password" id="pass" placeholder="Password" required /><span id="s3"></span>
-        </div>
-        <div class="input-box">
-          <label>Confirm password</label>
-          <input type="password" id="password" placeholder="Confirm password" required /><span id="s4"></span>
+               <label>Confirm password</label>
+               <input type="password" id="password" placeholder="Confirm password" required />
+               <span id="confirmpassworderror"></span>
         </div>
         </div>
         </div>
         <button>Register</button>
+        <span id="registererror"></span>
         <div  class="loginlink" style="text-align:center;"> <p>Already have an account?
-                <a href="Userlogin.html">login now </a></p>
-            </div>
+        <a href="login.html">login now </a></p>
+        </div>
       </form>
 
     </section>
-
+    <script type="text/javascript" src="registervalidation.js"></script>
+    <script type="text/javascript" src="register.js"></script>
   </body>
 </html>
 

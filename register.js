@@ -1,3 +1,25 @@
+function cities()
+{
+    var stateDropdown=document.getElementById("state");
+    var cityDropdown=document.getElementById("city");
+    cityDropdown.innerHTML="";
+    var selected=stateDropdown.value;
+    var citynames={
+        "Kerala":["Kottayam","Ernakulam","Kollam","Palakad"],
+        "Tamil nadu":["Coimbatore","Salem","Theni","Erode"],
+        "Karnataka":["Hassan","Kaveri","Mysuru","Udupi"]
+    };
+    var cityOptions=citynames[selected];
+    for( var i=0; i< cityOptions.length;i++){
+        var option=document.createElement("option");
+        option.text=cityOptions[i];
+        cityDropdown.add(option);
+    }
+}
+
+
+
+
 function formvalid(){
 
     var p=/^[6789][0-9]{9}$/;

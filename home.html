@@ -8,41 +8,96 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="home.css">
-    <script type="text/javascript" src="home.js"></script>
+    
 </head>
 <body>
 <header>
-   <nav class="navbar container flex">
-<!--	   <input type="checkbox" id="check">-->
-<!--	   <label for="check" class="checkbutton">-->
-<!--		   <i class="fas fa-bars"></i>-->
-<!--	   </label>-->
-<!--	   <label class="logo">Shopclues</label>-->
-	   <h2 class="logo"><a href="#">Shopclues</a></h2>
-	   <input type="checkbox" id="menu">
-	   <label for="menu" id="hamburger">
-		   <i class="fas fa-bars"></i>
-	   </label>
-	   <ul class="nav-links flex">
-		   <li><a href="#">Home</a></li>
+   <nav >
+	<input type="checkbox" id="check">
+	<label for="check" class="checkbtn">
+		<i class="fas fa-bars"></i>
+	</label>
+	   <label class="logo">Shopclues</label>
+	  
+	   <ul>
+		   <li><a class="active" href="home.html">Home</a></li>
 		   <li><a href="Aboutus.html">About us</a></li>
 		   <li><a href="Contactus.html">Contact us</a></li>
-		   <li><a href="Registraion.html">Sign in</a></li>
-		   <li><a href="login.html"> Login</a></li>
+		   <li><a href="Registraion.html">Sign up</a></li>
+		   <li><a href="login.html"> Sign in</a></li>
 	   </ul>
    </nav>
 
 </header>
-<section class="homepage" id="home">
-	<div class="content">
 
+<section class="homepage" id="home">
+	<!-- image slider start -->
+	<div class="slider">
+		<div class="slides">
+       <!-- radio buttons start -->
+		<input type="radio" name="radiobutton" id="radio1">
+		<input type="radio" name="radiobutton" id="radio2">
+		<input type="radio" name="radiobutton" id="radio3">
+		<input type="radio" name="radiobutton" id="radio4">
+
+		 <!-- radio buttons end -->
+		  <!-- slide image start -->
+        <div class="slide first">
+			<img src="banner1.jpg" alt="">
+		</div>
+		<div class="slide">
+			<img src="banner5.jpg" alt="">
+		</div>
+		
+		<div class="slide ">
+			<img src="2.jpg" alt="">
+		</div>
+		<div class="slide ">
+			<img src="banner1.jpg" alt="">
+		</div>
+
+
+		   		  <!-- slide image end -->
+      <!-- automatic navigation start -->
+	   <div class="navigationauto">
+	   <div class="auto1"></div>
+	   <div class="auto2"></div>
+	   <div class="auto3"></div>
+	   <div class="auto4"></div>
+	  
 	</div>
+ <!-- automatic navigation end -->
+</div>
+  <!-- manual navigation start -->
+  <div class="navigationmanual">
+<label for="radio1" class="manual"></label>
+<label for="radio2" class="manual"></label>
+<label for="radio3" class="manual"></label>
+<label for="radio4" class="manual"></label>
+
+  </div>
+  <!-- manual navigation end -->
+
+		</div>
+
+
+		<!-- image slider end -->
 </section>
-<footer class="footer">
+
+
+
+
+
+
+
+
+
+<!-- <footer class="footer">
 	<div class="container">
 		<span>Copyright 2024 all rights reserved</span>
 	</div>
-</footer>
+</footer> -->
+<script type="text/javascript" src="home.js"></script>
 </body>
 </html>
 
