@@ -2,14 +2,16 @@ var nameError=document.getElementById('name-error');
 var emailError=document.getElementById('email-error');
 var messageError=document.getElementById('message-error');
 var submitError=document.getElementById('submit-error');
-
+// function to validate the name 
 function validateName()
 {
     var name=document.getElementById('contact-name').value;
+    // Check the name characters length is zero or not 
     if(name.length == 0){
         nameError.innerHTML='Name is required';
         return false;
     }
+    // Check the name matches the pattern 
     if(!name.match(/^[a-zA-Z]+ [a-zA-Z]+$/))
         { 
         nameError.innerHTML="Write full name";
@@ -18,12 +20,14 @@ function validateName()
         nameError.innerHTML='<i class="fa-regular fa-circle-check"></i>';
         return true;
 }
+// function to validate the email 
 function validateEmail(){
     var email =document.getElementById('contact-email').value;
     if(email.length == 0){
         emailError.innerHTML='Email is required';
         return false;
     }
+    // Check the email matches the pattern 
     if(!email.match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/))
         { 
         emailError.innerHTML="Email is invalid";
@@ -32,10 +36,12 @@ function validateEmail(){
         emailError.innerHTML='<i class="fa-regular fa-circle-check"></i>';
         return true;
 }
+// function to validate the message 
 function validateMessage(){
     var message = document.getElementById('contact-message').value;
     var required = 20;
     var left = required - message.length;
+    // Check the message length is 20 or not 
     if(left > 0){
         messageError.innerHTML=left + 'more characters required ';
         return false;
@@ -43,8 +49,10 @@ function validateMessage(){
     messageError.innerHTML='<i class="fa-regular fa-circle-check"></i>';
     return true;
 }
+// function to validate form 
 function validateForm()
 {
+    // if all the fields are not valid then display error message 
     if(!validateName() || !validateEmail() || !validateMessage()){
         submitError.style.display='block';
         submitError.innerHTML='Please fix error to submit';
@@ -56,6 +64,30 @@ function validateForm()
         alert("Message send successfully!!!");
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

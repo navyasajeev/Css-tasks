@@ -4,20 +4,29 @@
        margin: 0;
        padding: 0;
        box-sizing: border-box;
-       font-family: "Poppins", sans-serif;
+       
      }
+     /* Adding style to the body element  */
      body {
        min-height: 100vh;
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       padding: 20px;
+      
+       /* padding: 10px; */
        background:url('image2.avif') no-repeat;
          background-size:cover;
          background-position:center;
      }
+     /* Adding style to the full content  */
+     .fullcontent
+     { display: flex;
+      align-items: center;
+      justify-content: center;
+          padding-left:50px;
+          padding-top: 10px;
+     }
+     /* Adding style to the container  */
      .container {
-       position: relative;
+/*        
+       position: relative; */
        max-width: 700px;
        width: 100%;
        background: white;
@@ -26,24 +35,28 @@
        border-radius: 8px;
        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
      }
+     /* Adding style to the container header  */
      .container header {
        font-size: 1.5rem;
        color: #333;
        font-weight: 500;
        text-align: center;
      }
+     /* Style the container form  */
      .container .form {
        margin-top: 30px;
      }
+     /* Style the form input box  */
      .form .input-box {
        width: 100%;
        margin-top: 20px;
      }
+     /* Style the input field labels  */
      .input-box label {
        color: #333;
      }
      .form :where(.input-box input, .select-box) {
-       position: relative;
+       /* position: relative; */
        height: 50px;
        width: 100%;
        outline: none;
@@ -54,44 +67,53 @@
        border-radius: 6px;
        padding: 0 15px;
      }
-     
+     /* adding shadow to the box  */
      .input-box input:focus {
        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
      }
+   /* Adding style to the column */
      .form .column {
        display: flex;
        column-gap: 15px;
      }
+     /* Adding margin  to the top of the gender box radio button  */
      .form .gender-box {
        margin-top: 20px;
      }
+     /* Adding style to the heading of the radio box  */
      .gender-box h3 {
        color: #333;
        font-size: 1rem;
        font-weight: 400;
        margin-bottom: 8px;
      }
+     /* Style the radion button options  */
      .form :where(.gender-option, .gender) {
        display: flex;
        align-items: center;
        column-gap: 50px;
        flex-wrap: wrap;
      }
+     /* adding gap between the radio button */
      .form .gender {
        column-gap: 5px;
      }
+     /* adding color to the radion button after the mouse click  */
      .gender input {
        accent-color: rgb(130, 106, 251);
      }
      .form :where(.gender input, .gender label) {
        cursor: pointer;
      }
+     /* Adding color to the gender label  */
      .gender label {
        color: #000;
      }
+     /* Adding margin to the addresss field  */
      .address :where(input, .select-box) {
        margin-top: 15px;
      }
+     /* Adding style to the selection box  */
      .select-box select {
        height: 100%;
        float:left;
@@ -101,6 +123,7 @@
        color: #707070;
        font-size: 1rem;
      }
+     /* Adding style to the button  */
      .form button {
        height: 55px;
        width: 100%;
@@ -114,9 +137,11 @@
        background-color:#213030;
        border-radius:15px;
      }
+     /* Style the button by changing the color when mouse hovers  */
      .form button:hover {
        background: #918e84;
      }
+     /* Style the error message  */
     .gender-box span,
    .input-box span{
       display:block;
@@ -125,38 +150,45 @@
       color:red;
       
    }
+   /* Style the id by changing the color  */
    .input-box span i{
       color:seagreen;
     }
 
-
+/* Style the navigation bar  */
     nav{
       background:transparent;
       height:60px;
       width:100%;
   }
+  label.logo img{
+    width:35px;
+    height:26px;
+    padding-right:5px;
+}
   label.logo{
      color:rgb(236, 240, 243);
       font-size:35px;
       line-height:80px;
-      padding:0 50px;
+      padding:0 35px;
       font-weight:bold;
   }
   nav ul{
       float:right;
-      margin-right:20px;
+      margin-right:10px;
   }
   nav ul li{
       display:inline-block;
       line-height:40px;
-      margin:0 5px;
+      margin:0;
   }
   nav ul li a{
       color:rgb(245, 242, 242);
       font-size:17px;
-      padding:7px 13px;
+      padding:7px 33px;
       border-radius:3px;
       text-transform:none;
+      text-decoration: none;
   }
   
   a.active,a:hover{
@@ -175,6 +207,149 @@
   #check{
       display:none;
   }
+
+  footer{
+    position: fixed;
+    bottom: 0;
+}
+@media (max-height:800px){
+    footer{
+        position: static;
+
+    }
+    header{
+        padding-top: 40px;
+
+    }
+ }
+.footerdistributed{
+  background-color: rgb(125, 23, 23);
+  /* windows:100%; */
+  box-sizing: border-box;
+  text-align:left;
+  padding: 50px 50px 60px 50px;
+  margin-top:80px;
+
+  
+}
+.footerdistributed .footerleft, .footerdistributed .footercenter, .footerdistributed .footerright  
+
+{
+    display:inline-block;
+    vertical-align: top;
+}
+.footerdistributed .footerleft{
+    width:30%;
+}
+.footerdistributed h3{
+    color:#ffff;
+    margin:0;
+}
+.footerdistributed .footerlinks{
+    color:#ffff;
+    margin:20px 0 12px;
+}
+.footerdistributed .footerlinks a{
+    display:inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color:inherit;
+}
+.footerdistributed .footercompany{
+    color: #8f9296;
+    font-size: 14px;
+    font-weight:normal;
+    margin:0;
+
+}
+.footerdistributed .footercenter{
+    width:35%;
+
+}
+.footerdistributed .footercenter i{
+    background-color: #33383b;
+    color:#ffff;
+    font-size:25px;
+    width:38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align:center;
+    line-height: 42px;
+    margin:10px 15px;
+    vertical-align: middle;
+}
+.footerdistributed .footercenter  p{
+    display: inline-block;
+    color:#ffff;
+    vertical-align: middle;
+    margin:0;
+}
+.footerdistributed .footercenter  p span{
+    display:block;
+    font-weight: normal;
+   font-size: 14px;
+   line-height: 2;
+
+}
+.footerdistributed .footercenter  p a{
+    color:#e0ac la;
+    text-decoration: none;
+
+}
+.footerdistributed .footerright{
+    width: 30%;
+}
+.footerdistributed .footerabout{
+    line-height: 20px;
+    color: #ced0d2;
+    font-size: 15px;
+    font-weight: normal;
+    margin: 0;
+}
+.footerdistributed .footerabout span{
+    display: block;
+    color:#ffff;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.footerdistributed .icons{
+    margin-top: 25px;
+}
+.footerdistributed .icons a{
+    display: inline-block;
+    width: 35px;
+    height:35px;
+    cursor:pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 20px;
+    color:#ffff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+.footerdistributed .icons a:hover{
+    background-color: #40d3dc;
+}
+.footerlinks a:hover{
+    color: #40d3dc;
+}
+/* responsive layout for footer session */
+@media(max-width:880px){
+    .footerdistributed .footerleft,  .footerdistributed .footercenter,  .footerdistributed .footerright
+{
+    display: block;
+   width:100%;
+   margin-bottom: 40px;
+   text-align: center;
+}
+.footerdistributed .footercenter{
+    margin-left: 0;
+}
+} 
+
   @media (max-width:952px)
   {
       label.logo{
@@ -224,7 +399,7 @@
 
 
 
-     /*Responsive*/
+     /*Responsive layout for sign up page when screen size less than 500px*/
      @media screen and (max-width: 500px) {
        .form .column {
          flex-wrap: wrap;

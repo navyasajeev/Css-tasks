@@ -16,27 +16,32 @@
      <label for="check" class="checkbtn">
        <i class="fas fa-bars"></i>
      </label>
-        <label class="logo">Shopclues</label>
+        <label class="logo"><img src="logo.webp">Shopclues</label>
        
         <ul>
           <li><a  href="home.html">Home</a></li>
-          <li><a class="active" href="Aboutus.html">About us</a></li>
+          <li><a  href="Aboutus.html">About us</a></li>
           <li><a href="Contactus.html">Contact us</a></li>
-          <li><a href="Registraion.html">Sign up</a></li>
+          <li><a class="active" href="Registraion.html">Sign up</a></li>
           <li><a href="login.html"> Sign in</a></li>
         </ul>
       </nav>
    
    </header>
+   <div class="fullcontent">
+    <!-- section starts here  -->
     <section class="container">
       <header>Sign up</header>
+      <!-- creating form for sign up -->
          <form   class="form" >
             <div class="column">
+              <!-- creating first input field with label  -->
                 <div class="input-box">
                      <label>First name</label>
                      <input type="text"  placeholder="First name" id="firstname" onkeyup="validateName()">
                      <span id="firsterror"></span>
                </div>
+                  <!-- creating second input field with label  -->
                <div class="input-box">
                      <label>Last name</label>
                      <input type="text"  placeholder="Last name" id="lastname" onkeyup="validateLast()">
@@ -44,22 +49,25 @@
                </div>
             </div>
             <div class="column">
+                 <!-- creating third input field with label  -->
                <div class="input-box">
                      <label>Phone number</label>
                      <input type="number" placeholder="Phone number" id="phoneNumber" onkeyup="validatePhone()">
                      <span id="phoneerror"></span>
                </div>
+                  <!-- creating fourth input field with label  -->
                <div class="input-box">
                      <label>Date of birth</label>
-                     <input type="date"  placeholder="Birth date" required />
+                     <input type="date"   placeholder="Birth date" id="dateinput"  max="" onclick="validateDate()" required>
                      <span id="dateerror"></span>
                </div>
             </div>
             <div class="gender-box" >
+                 <!-- creating fifth input field with label  -->
             <h3>Gender</h3>
-                <div class="gender-option">
+                <div class="gender-option ">
                 <div class="gender" >
-                    <input type="radio" id="check-male" name="gender"  />
+                    <input type="radio" id="check-male" name="gender" required />
                     <label for="check-male">Male</label>
                 </div>
                 <div class="gender">
@@ -73,61 +81,113 @@
              </div>
              <span id="gendererror"></span>
         <div>
+             <!-- creating address input field with label  -->
         <div class="input-box ">
           <label>Address</label>
-          <input type="text"  placeholder="Address line 1" id="line1" onkeyup="validateLine1()">
+          <input type="text"  placeholder="Address line 1" id="line1" onkeyup="validateLine1()" required >
           <span id="line1error"></span>
-          <input type="text" placeholder="Address line 2" id="line2" onkeyup="validateLine2()">
+          <input type="text" placeholder="Address line 2" id="line2" onkeyup="validateLine2()" required >
           <span id="line2error"></span>
           <div class="column">
+            <!-- creating dropdown list for state field  -->
             <div class="select-box">
-            <select id="state" onchange="cities()" >
-                <option value="select">State</option>
+            <select id="state" onchange="cities()"  >
+                <option value="select" >State</option>
                 <option value="Kerala">Kerala</option>
                 <option value="Tamil nadu">Tamil nadu</option>
                 <option value="Karnataka">Karnataka</option>
             </select>
-            <span id="stateerror"></span>
+            <!-- creating dropdown list accoring to the selection of state field  -->
             </div>
                <div class="select-box"> 
               <select id="city">
-              <option >city</option> 
+              <option >City</option> 
               </select>
             </div>
           </div>  
         <div class="column">
+          <!-- creating email input field with label  -->
         <div class="input-box">
              <label>Email address</label>
-             <input type="text"  placeholder="Email address" id="emailaddress" onkeyup="validateEmail()">
+             <input type="text"  placeholder="Email address" id="emailaddress" onkeyup="validateEmail()" required >
              <span id="emailerror"></span>
         </div>
+         <!-- creating username input field with label  -->
         <div class="input-box">
               <label>Username</label>
-              <input type="text"  placeholder="Username"  id="username" onkeyup="validateUsername()" >
+              <input type="text"  placeholder="Username"  id="username" onkeyup="validateUsername()" required >
               <span id="usernameerror"></span>
         </div>
         </div>
         <div class="column">
+           <!-- creating password input field with label  -->
         <div class="input-box">
                <label>Password</label>
-               <input type="password"  placeholder="Password" id="password" onkeyup="validatePassword()" >
+               <input type="password"  placeholder="Password" id="password" onkeyup="validatePassword()" required  >
                <span id="passworderror"></span>
         </div>
+         <!-- creating confirm password input field with label  -->
         <div class="input-box">
                <label>Confirm password</label>
-               <input type="password" id="password" placeholder="Confirm password" required />
+               <input type="password"  placeholder="Confirm password" id="confirm" onkeyup="validateConfirm()" required >
                <span id="confirmpassworderror"></span>
         </div>
         </div>
         </div>
-        <button>Register</button>
+        <!-- Creating button for sign up  -->
+        <button onclick="return validateForm()">Sign up</button>
         <span id="registererror"></span>
         <div  class="loginlink" style="text-align:center;"> <p>Already have an account?
-        <a href="login.html">login now </a></p>
+        <a href="login.html">Sign in now </a></p>
         </div>
       </form>
 
     </section>
+    <!-- section ends here  -->
+    </div>
+    <footer class="footerdistributed">
+      <div class="footerleft">
+        <h3>Shopclues</span></h3>
+        <p class="footerlinks">
+          <a href="home.html">Home</a>
+          |
+          <a href="Aboutus.html">About us</a>
+          |
+          <a href="Contactus.html">Contact us</a>
+          |
+        </p>
+        <p class="footercompany">Copyright <i class="fa-regular fa-copyright"></i> 2024<strong>Shopclues</strong>
+        All rights reserved</p>
+      </div>
+      <div class="footercenter">
+        <div>
+          <i class="fa-solid fa-location-dot"></i>
+          <p><span>46765 Shopclues complex,</span>Palai</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-envelope"></i>
+          <p>shopclues@gmail.com</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-phone-volume"></i>
+          <p>+917653456237</p>		
+        </div>
+      </div>
+       <div class="footerright">
+      <p class="footerabout">
+        <span>About the company</span>
+        <strong>Shopclues</strong>is India’s first online Managed Marketplace that connects buyers and sellers online and offers a trusted and safe online shopping environment.
+    
+      </p>
+      <div class="icons">
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        
+      </div>
+       </div>
+    
+    </footer>
     <script type="text/javascript" src="registervalidation.js"></script>
     <script type="text/javascript" src="register.js"></script>
   </body>

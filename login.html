@@ -10,43 +10,110 @@
      <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
     
     <link rel="stylesheet" href="login.css">
-   
-    
 </head>
 <body>
-    
+  <!-- header starts here  -->
+    <header>
+        <nav >
+       <input type="checkbox" id="check">
+       <label for="check" class="checkbtn">
+         <i class="fas fa-bars"></i>
+       </label>
+          <label class="logo"><img src="logo.webp">Shopclues</label>
+         
+          <ul>
+            <li><a  href="home.html">Home</a></li>
+            <li><a  href="Aboutus.html">About us</a></li>
+            <li><a href="Contactus.html">Contact us</a></li>
+            <li><a  href="Registraion.html">Sign up</a></li>
+            <li><a  class="active"href="login.html"> Sign in</a></li>
+          </ul>
+        </nav>
+     </header>
+     <!-- header ends here  -->
+     <div class="fullcontent">
  <div class="wrapper"><center>
-    <form  class="form">
-      <h1>Login </h1>
+  <!-- creating form for the login  -->
+    <form  class="form" >
+      <h1>Sign in </h1>
         <div class="container">
             <div class="input-box">
-                  <input type="text" placeholder="Email Address" id="contact-email" onfocusout="emailvalid()">
+                  <input type="text" placeholder="Email address" id="contact-email" onkeyup="emailvalid()" div. ><span id="email-error"></span>
                <div class="box"><span id="email-error"></span> </div>
                 </div>
             <div class="input-box">
-                  <input type="password" placeholder="Password" id="contact-password" onfocusout="passwordvalid()">
+                  <input type="password" placeholder="Password" id="contact-password" onkeyup="passwordvalid()">
                 <div class="box">  <span id="password-error"></span> </div>
                 </div>
             <div class="remember-forget">
                   <label><input type="checkbox"> Remember me</label>
-                  <a href="#">Forgot password? </a><br>
+                  <!-- <a href="#">Forgot password? </a><br> -->
             </div>
-            <button type="submit" class="btn"  onclick=" return validate()">Login</button>
+            <button type="submit" class="btn"  onclick=" return validate()" >Sign in</button>
             <div class="box"><span id="submit-error"></span></div>
             <div  class="registerlink"> <p>Not a member?
-                <a href="Registraion.html">Signup now </a></p>
+                <a href="Registraion.html">Sign up now </a></p>
             </div>
         </div>
      </form>
  </center>
  </div>
+</div>
 
+<footer class="footerdistributed">
+	<div class="footerleft">
+		<h3>Shopclues</span></h3>
+		<p class="footerlinks">
+			<a href="home.html">Home</a>
+			|
+			<a href="Aboutus.html">About us</a>
+			|
+			<a href="Contactus.html">Contact us</a>
+			|
+		</p>
+		<p class="footercompany">Copyright <i class="fa-regular fa-copyright"></i> 2024<strong>Shopclues</strong>
+		All rights reserved</p>
+	</div>
+	<div class="footercenter">
+		<div>
+			<i class="fa-solid fa-location-dot"></i>
+			<p><span>46765 Shopclues complex,</span>Palai</p>
+		</div>
+		<div>
+			<i class="fa-solid fa-envelope"></i>
+			<p>shopclues@gmail.com</p>
+		</div>
+		<div>
+			<i class="fa-solid fa-phone-volume"></i>
+			<p>+917653456237</p>		
+		</div>
+	</div>
+   <div class="footerright">
+	<p class="footerabout">
+		<span>About the company</span>
+		<strong>Shopclues</strong>is India’s first online Managed Marketplace that connects buyers and sellers online and offers a trusted and safe online shopping environment.
 
+	</p>
+	<div class="icons">
+		<a href="#"><i class="fa-brands fa-twitter"></i></a>
+		<a href="#"><i class="fa-brands fa-facebook"></i></a>
+		<a href="#"><i class="fa-brands fa-linkedin"></i></a>
+		
+	</div>
+   </div>
+
+</footer>
 <script src="loginvalidation.js"></script>
-  
-
 </body>
 </html>
+
+
+
+
+
+
+
+
 
 
 

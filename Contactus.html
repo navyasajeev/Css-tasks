@@ -13,30 +13,34 @@
 </head>
 <body >
     <header>
-        <nav >
+        <!-- header section start here  -->
+        <nav class="nav">
        <input type="checkbox" id="check">
        <label for="check" class="checkbtn">
          <i class="fas fa-bars"></i>
        </label>
-          <label class="logo">Shopclues</label>
+          <label class="logo"><img src="logo.webp">Shopclues</label>
          
           <ul>
             <li><a  href="home.html">Home</a></li>
-            <li><a class="active" href="Aboutus.html">About us</a></li>
-            <li><a href="Contactus.html">Contact us</a></li>
+            <li><a  href="Aboutus.html">About us</a></li>
+            <li><a class="active" href="Contactus.html">Contact us</a></li>
             <li><a href="Registraion.html">Sign up</a></li>
             <li><a href="login.html"> Sign in</a></li>
           </ul>
         </nav>
-     
+     <!-- header section ends here  -->
      </header>
+     <!-- session start here  -->
 <section class="contact">
     <div class="content">
+        <!-- adding contact us page  -->
         <h2>Contact us</h2>
     </div>
     <div class="container">
         <div class="contactinfo">
             <div class="box">
+                <!-- Adding contact information  -->
                 <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
                 <div class="text">
                     <h3>Address</h3>
@@ -44,6 +48,7 @@
                 </div>
             </div>
             <div class="box">
+                <!-- Adding mail address with icon -->
                 <div class="icon"><i class="fa-solid fa-envelope"></i></div>
                 <div class="text">
                     <h3>Email</h3>
@@ -51,6 +56,7 @@
                 </div>
             </div>
             <div class="box">
+                <!-- Adding phone number with phone  -->
                 <div class="icon"><i class="fa-solid fa-phone-volume"></i></div>
                 <div class="text">
                     <h3>Phone</h3>
@@ -58,25 +64,30 @@
                 </div>
             </div>
         </div>
+        <!-- adding a send form  for messages -->
         <div class="contactform">
             <form name="custom_form" >
                 <h2 style="text-align:center;">Send message</h2>
                 <div class="input-row">
+                    <!-- Adding input field for full name with label  -->
                 <div class="inputbox">
                      <label>Full name</label>
-                    <input type="text" name="name"  id="contact-name" onkeyup="validateName()">
+                    <input type="text" name="name"  id="contact-name" onkeyup="validateName()"> <span id="namevalid"></span>
                     <span id="name-error"></span>
                 </div>
+                <!-- Adding email field eith label  -->
                 <div class="inputbox">
                     <label>Email</label>
                     <input type="text" name="email" id="contact-email" onkeyup="validateEmail()">
                     <span id="email-error"></span>
                 </div>
+                <!-- Adding message field with label  -->
                 <div class="inputbox">
                        <label>Type your message...</label>
                    <textarea  name="message"  id="contact-message" onkeyup="validateMessage()"></textarea>
                      <span id="message-error"></span>
                 </div>
+                <!-- <Adding button to send message  -->
                 <div class="inputbox">
                     <input type="submit" name="" value="Send" onclick="return validateForm()">
                     <span id="submit-error"></span>
@@ -86,6 +97,47 @@
         </div>
     </div>
 </section>
+<footer class="footerdistributed">
+	<div class="footerleft">
+		<h3>Shopclues</span></h3>
+		<p class="footerlinks">
+			<a href="home.html">Home</a>
+			|
+			<a href="Aboutus.html">About us</a>
+			|
+			<a href="Contactus.html">Contact us</a>	
+		</p>
+		<p class="footercompany">Copyright <i class="fa-regular fa-copyright"></i> 2024 <strong>Shopclues</strong>
+		| All rights reserved</p>
+	</div>
+	<div class="footercenter">
+		<div>
+			<i class="fa-solid fa-location-dot"></i>
+			<p><span>46765 Shopclues complex,</span>Palai</p>
+		</div>
+		<div>
+			<i class="fa-solid fa-envelope"></i>
+			<p>shopclues@gmail.com</p>
+		</div>
+		<div>
+			<i class="fa-solid fa-phone-volume"></i>
+			<p>+917653456237</p>		
+		</div>
+	</div>
+   <div class="footerright">
+	<p class="footerabout">
+		<span>About the company</span>
+		<strong>Shopclues</strong> is India’s first online Managed Marketplace that connects buyers and sellers online and offers a trusted and safe online shopping environment.
+	</p>
+	<div class="icons">
+		<a href="#"><i class="fa-brands fa-twitter"></i></a>
+		<a href="#"><i class="fa-brands fa-facebook"></i></a>
+		<a href="#"><i class="fa-brands fa-linkedin"></i></a>
+		
+	</div>
+   </div>
+
+</footer>
 <script type="text/javascript" src="contactus.js"></script>
 </body>
 </html>

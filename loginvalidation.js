@@ -3,21 +3,8 @@ var emailError=document.getElementById('email-error');
 var passwordError=document.getElementById('password-error');
 var submitError=document.getElementById('submit-error');
 
-// function validateName()
-// {
-//     var name=document.getElementById('contact-name').value;
-//     if(name.length == 0){
-//         nameError.innerHTML='Name is required';
-//         return false;
-//     }
-//     if(!name.match(/^[a-zA-Z]+ [a-zA-Z]+$/))
-//         { 
-//         nameError.innerHTML="Write full name";
-//         return false;
-//         }
-//         nameError.innerHTML='<i class="fa-regular fa-circle-check"></i>';
-//         return true;
-// }
+
+// function to validate email 
 function emailvalid(){
     var email =document.getElementById('contact-email').value;
     if(email.length == 0){
@@ -32,6 +19,7 @@ function emailvalid(){
         emailError.innerHTML='<i class="fa-regular fa-circle-check"></i>';
         return true;
 }
+// function to validate password 
 function passwordvalid(){
     var password =document.getElementById('contact-password').value;
     if(password.length == 0){
@@ -48,32 +36,47 @@ function passwordvalid(){
         passwordError.innerHTML='<i class="fa-regular fa-circle-check"></i>';
         return true;
 }
-// function validateMessage(){
-//     var message = document.getElementById('contact-message').value;
-//     var required = 20;
-//     var left = required - message.length;
-//     if(left > 0){
-//         messageError.innerHTML=left + 'more characters required ';
-//         return false;
-//     }
-//     messageError.innerHTML='<i class="fa-regular fa-circle-check"></i>';
-//     return true;
-// }
+
+// function to validate form 
 function validate()
 {
     if( !emailvalid() || !passwordvalid()){
-        submitError.style.display='block';
-        submitError.innerHTML='Please fix error to login';
+        submitError.style.display = 'block';
+        submitError.innerHTML='Please fix error to sign in';
         setTimeout(function(){submitError.style.display = 'none';}, 3000);
         return false;
 
     }
     else{
-        alert("login successfully!!!");
-            window.location = "home.html";
-        
+        // alert("login successfully!!!");
+            document.location.href = "home.html"
+            alert("Sign in successfully!!!");
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

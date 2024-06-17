@@ -1,15 +1,19 @@
-
+/* adding style to the body elemnt  */
 body{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height: 72vh;
-    margin:100px;
+   
+    min-height: 97vh;
+    margin:0px;
     background:url('image2.avif') no-repeat;
     background-size:cover;
     background-position:center;
 }
-
+/* adding style to the container  */
+fullcontent{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+/* adding style to the sign in button  */
 button {
     background-color:#213030;
     width: 80%;
@@ -20,18 +24,22 @@ button {
     cursor: pointer;
     border-radius:15px;
 }
+/* changing the color of the sign in button when mouse hovers  */
 button:hover {
     background: #918e84;
 }
+/* adding style to the form element  */
  form {
+
         border: 5px solid white;
         border-radius:15px;
         width: 400px;
         height: 400px;
         padding: 10px;
-        margin: 0;
+        margin-top: 100px;
         background:#ffff;
 }
+/* style the input field both text and password types  */
 input[type=text], input[type=password] {
         width: 80%;
         margin: 8px 0;
@@ -53,6 +61,7 @@ small{
   visibility: shown;
 
 } */
+ /* adding style to the error message */
 .input-box .box span{
   display:block;
   bottom:12px;
@@ -61,13 +70,258 @@ small{
   color:red;
   
 }
+/* adding style to the error message when submit click without filling fields  */
 #submit-error{
   color:red;
 }
 .input-box .box span i{
  color:seagreen;
 }
+/* adding style to the navigation bar  */
+nav{
+  background:transparent;
+  height:60px;
+  width:100%;
+}
+/* adding style to the logo  */
+label.logo{
+ color:rgb(236, 240, 243);
+  font-size:35px;
+  line-height:80px;
+  padding:0 30px;
+  font-weight:bold;
+}
+label.logo img{
+  width:35px;
+  height:26px;
+  padding-right:5px;
+}
+/* adding style to the all navigation bar items  */
+nav ul{
+  float:right;
+  margin-right:20px;
+}
+nav ul li{
+  display:inline-block;
+  line-height:40px;
+  margin:0 5px;
+}
+nav ul li a{
+  color:rgb(245, 242, 242);
+  font-size:17px;
+  padding:7px 13px;
+  border-radius:3px;
+  text-transform:none;
+  text-decoration: none;
+}
+/* adding style to the navigation bar items when mouse hovers  */
+a.active,a:hover{
+  background:#7a0303;
+  transition:.5s;
+}
+.checkbtn{
+  font-size:30px;
+  color:rgb(199, 197, 215);
+  float:right;
+  line-height:80px;
+  margin-right:40px;
+  cursor:pointer;
+  display:none;
+}
+#check{
+  display:none;
+}
+/* adding style to the footer session  */
+footer{
+  position: fixed;
+  bottom: 0;
+}
+@media (max-height:800px){
+  footer{
+      position: static;
 
+  }
+  header{
+      padding-top: 40px;
+
+  }
+}
+.footerdistributed{
+background-color: rgb(125, 23, 23);
+/* windows:100%; */
+box-sizing: border-box;
+text-align:left;
+padding: 50px 50px 60px 50px;
+margin-top:80px;
+}
+.footerdistributed .footerleft, .footerdistributed .footercenter, .footerdistributed .footerright  
+
+{
+  display:inline-block;
+  vertical-align: top;
+}
+.footerdistributed .footerleft{
+  width:30%;
+}
+.footerdistributed h3{
+  color:#ffff;
+  margin:0;
+}
+.footerdistributed .footerlinks{
+  color:#ffff;
+  margin:20px 0 12px;
+}
+.footerdistributed .footerlinks a{
+  display:inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color:inherit;
+}
+.footerdistributed .footercompany{
+  color: #8f9296;
+  font-size: 14px;
+  font-weight:normal;
+  margin:0;
+
+}
+.footerdistributed .footercenter{
+  width:35%;
+
+}
+.footerdistributed .footercenter i{
+  background-color: #33383b;
+  color:#ffff;
+  font-size:25px;
+  width:38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align:center;
+  line-height: 42px;
+  margin:10px 15px;
+  vertical-align: middle;
+}
+.footerdistributed .footercenter  p{
+  display: inline-block;
+  color:#ffff;
+  vertical-align: middle;
+  margin:0;
+}
+.footerdistributed .footercenter  p span{
+  display:block;
+  font-weight: normal;
+ font-size: 14px;
+ line-height: 2;
+
+}
+.footerdistributed .footercenter  p a{
+  color:#e0ac la;
+  text-decoration: none;
+
+}
+.footerdistributed .footerright{
+  width: 30%;
+}
+.footerdistributed .footerabout{
+  line-height: 20px;
+  color: #ced0d2;
+  font-size: 15px;
+  font-weight: normal;
+  margin: 0;
+}
+.footerdistributed .footerabout span{
+  display: block;
+  color:#ffff;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.footerdistributed .icons{
+  margin-top: 25px;
+}
+.footerdistributed .icons a{
+  display: inline-block;
+  width: 35px;
+  height:35px;
+  cursor:pointer;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color:#ffff;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+.footerdistributed .icons a:hover{
+  background-color: #40d3dc;
+}
+.footerlinks a:hover{
+  color: #40d3dc;
+}
+@media(max-width:880px){
+  .footerdistributed .footerleft,  .footerdistributed .footercenter,  .footerdistributed .footerright
+{
+  display: block;
+ width:100%;
+ margin-bottom: 40px;
+ text-align: center;
+}
+.footerdistributed .footercenter{
+  margin-left: 0;
+}
+} 
+
+
+
+/* Responsive layout for nav bar when the screen is less than 952 px  */
+
+@media (max-width:952px)
+{
+  label.logo{
+      font-size:30px;
+      padding-left:30px;
+      color:aliceblue;
+  }
+  nav ul li a{
+      font-size:16px;
+  }
+}
+@media (max-width:858px)
+{
+  .checkbtn{
+      display:block;
+  }
+  ul{
+      position: fixed;
+      width:100%;
+      height:100vh;
+      background:#cb5260;
+      top:80px;
+      left:-109%;
+      text-align:center;
+      transition:all .5s;
+
+  }
+  nav ul li{
+      display:block;
+      margin:50px 0;
+      line-height:30px;
+  }
+  nav ul li a{
+      font-size:20px;
+      text-align:center;
+  }
+  a:hover,a.active{
+      background:none;
+      color:#1f0341;
+  }
+  #check:checked ~ ul{
+      left:0;
+
+  }
+
+}
+/* responsive layout for home page when the screen less than 768px wide  */
 @media screen and (max-width: 768px) {
       form{
         height:400px;

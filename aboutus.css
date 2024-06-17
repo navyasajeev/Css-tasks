@@ -1,10 +1,18 @@
+/* style the body element  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+  }
 body
-{
+{ 
+   
  background:url('image2.avif') no-repeat;
     background-size:cover;
-    background-position:center;
-    font-family: sans-serif;
+    background-position:center;  
+    /* font-family: sans-serif; */
 }
+/* adding style to heading  */
 .heading
 {
     width:90%;
@@ -13,42 +21,49 @@ body
     align-items:center;
     flex-direction:column;
     text-align:center;
-    margin:0px auto;
+    margin:10px auto;
 }
+/* adding style to the container  */
 .container
 {
-    width:90%;
+    max-width:900px;
     margin:0 auto;
-    padding:10px 20px;
+    padding:0px 20px;
  }
+ /* Style the about class  */
 .about{
+    padding-top:10px;
      display:flex;
      justify-content:space-between;
      align-items:center;
      flex-wrap:wrap;
 }
+/* adding style to the image in about us page  */
 .aboutimage{
     flex:1;
     margin-right:40px;
     overflow:hidden;
-}
-   .aboutimage img
+} 
+.aboutimage img
    {
       max-width:100%;
       height:340px;
       display:block;
       }
+/* adding style to content in the about us page  */
 .content
       {
           flex:1;
           }
+/* adding style to paragraph in the content  */
 .content p{
     font-size:18px; 
     line-height:1.5; 
     color:#000; 
-    padding:10px; 
+    padding:20px; 
     text-align:justify;
 }
+/* adding style to the read more button   */
 .content .readmore
 {
     display:inline-block;
@@ -59,10 +74,7 @@ body
     border-radius:25px;
     margin-top:15px;
     }
-
-
-
-
+/* adding style to nav bar  */
     nav{
         background:transparent;
         height:60px;
@@ -72,8 +84,13 @@ body
        color:rgb(236, 240, 243);
         font-size:35px;
         line-height:80px;
-        padding:0 50px;
+        padding:0 35px;
         font-weight:bold;
+    }
+    label.logo img{
+        width:35px;
+        height:26px;
+        padding-right:5px;
     }
     nav ul{
         float:right;
@@ -90,6 +107,7 @@ body
         padding:7px 13px;
         border-radius:3px;
         text-transform:none;
+        text-decoration: none;
     }
     
     a.active,a:hover{
@@ -108,11 +126,12 @@ body
     #check{
         display:none;
     }
+    /* responsive  layout */
     @media (max-width:952px)
     {
         label.logo{
             font-size:30px;
-            padding-left:30px;
+            padding-left:35px;
             color:aliceblue;
         }
         nav ul li a{
@@ -154,11 +173,151 @@ body
         }
     
     }
-
-
-
-
-
+    footer{
+        position: fixed;
+        bottom: 0;
+       
+       
+    }
+    @media (max-height:800px){
+        footer{
+            position: static;
+    
+        }
+        header{
+            padding-top: 40px;
+    
+        }
+     }
+    .footerdistributed{
+      background-color: rgb(125, 23, 23);
+      windows:100%;
+      width:100%;
+      box-sizing: border-box;
+      text-align:left;
+      padding: 50px 50px 60px 50px;
+      margin-top:80px;
+    
+      
+    }
+    .footerdistributed .footerleft, .footerdistributed .footercenter, .footerdistributed .footerright  
+    
+    {
+        display:inline-block;
+        vertical-align: top;
+    }
+    .footerdistributed .footerleft{
+        width:30%;
+    }
+    .footerdistributed h3{
+        color:#ffff;
+        margin:0;
+    }
+    .footerdistributed .footerlinks{
+        color:#ffff;
+        margin:20px 0 12px;
+    }
+    .footerdistributed .footerlinks a{
+        display:inline-block;
+        line-height: 1.8;
+        text-decoration: none;
+        color:inherit;
+    }
+    .footerdistributed .footercompany{
+        color: #8f9296;
+        font-size: 14px;
+        font-weight:normal;
+        margin:0;
+    
+    }
+    .footerdistributed .footercenter{
+        width:35%;
+    
+    }
+    .footerdistributed .footercenter i{
+        background-color: #33383b;
+        color:#ffff;
+        font-size:25px;
+        width:38px;
+        height: 38px;
+        border-radius: 50%;
+        text-align:center;
+        line-height: 42px;
+        margin:10px 15px;
+        vertical-align: middle;
+    }
+    .footerdistributed .footercenter  p{
+        display: inline-block;
+        color:#ffff;
+        vertical-align: middle;
+        margin:0;
+    }
+    .footerdistributed .footercenter  p span{
+        display:block;
+        font-weight: normal;
+       font-size: 14px;
+       line-height: 2;
+    
+    }
+    .footerdistributed .footercenter  p a{
+        color:#e0ac la;
+        text-decoration: none;
+    
+    }
+    .footerdistributed .footerright{
+        width: 30%;
+    }
+    .footerdistributed .footerabout{
+        line-height: 20px;
+        color: #ced0d2;
+        font-size: 15px;
+        font-weight: normal;
+        margin: 0;
+    }
+    .footerdistributed .footerabout span{
+        display: block;
+        color:#ffff;
+        font-size: 13px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .footerdistributed .icons{
+        margin-top: 25px;
+    }
+    .footerdistributed .icons a{
+        display: inline-block;
+        width: 35px;
+        height:35px;
+        cursor:pointer;
+        background-color: #33383b;
+        border-radius: 2px;
+        font-size: 20px;
+        color:#ffff;
+        text-align: center;
+        line-height: 35px;
+        margin-right: 3px;
+        margin-bottom: 5px;
+    }
+    .footerdistributed .icons a:hover{
+        background-color: #40d3dc;
+    }
+    .footerlinks a:hover{
+        color: #40d3dc;
+    }
+    /* responsive layout  */
+    @media(max-width:880px){
+        .footerdistributed .footerleft,  .footerdistributed .footercenter,  .footerdistributed .footerright
+    {
+        display: block;
+       width:100%;
+       margin-bottom: 40px;
+       text-align: center;
+    }
+    .footerdistributed .footercenter{
+        margin-left: 0;
+    }
+    } 
+    /* responsive layout for about us page  */
 @media screen and (max-width:768px)
 {
   .heading{
